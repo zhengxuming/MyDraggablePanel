@@ -1,0 +1,15 @@
+digraph G1 {
+  concentrate = true;
+  PlacesCollectionRendererBuilder -> Context;
+  n2 [label="RendererAdapter<com.github.pedrovgs.sample.viewmodel.PlaceViewModel>"];
+  PlacesSampleActivity -> n2;
+  n2 -> PlacesCollectionRendererBuilder;
+  n2 -> LayoutInflater;
+  n2 -> PlaceCollectionViewModel;
+  n3 [label="RendererAdapter<com.github.pedrovgs.sample.viewmodel.TvShowViewModel>"];
+  n3 -> LayoutInflater;
+  n3 -> TvShowCollectionViewModel;
+  n3 -> TvShowCollectionRendererBuilder;
+  TvShowCollectionRendererBuilder -> Context;
+  TvShowsActivity -> n3;
+}
